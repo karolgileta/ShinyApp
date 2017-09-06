@@ -4,9 +4,6 @@ shinyServer(function(input, output, session) {
   library(datasets)
 
   getDataForGraphOutput = eventReactive(input$updateData, {
-    raw.date.from = input$time.range[1]
-    raw.date.to = input$time.range[2]
-    #dates = datesToWeeks(raw.date.from, raw.date.to)
     data.to.output = getTimeSeriesToPlot(datasets::AirPassengers)
     return(data.to.output)
   })

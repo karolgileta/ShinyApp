@@ -15,7 +15,7 @@ turnTimeSeriesToDataFrame = function(time.series) {
   #'
   #' @export turnTimeSeriesToDataFrame
   #' @import stats
-  require(stats)
+  requireNamespace('stats')
 
   stopifnot(is.ts(time.series))
   month.names = list(month.abb, unique(floor(time(time.series))))

@@ -1,6 +1,6 @@
 Package: ShinyApp
 Type: Package
-Title: Converts time series data
+Title: Time series data converter and plotter
 Version: 1.0.0
 Author: Karol Gileta
 Maintainer: Karol Gileta <karol.gileta@gmail.com>
@@ -14,5 +14,6 @@ Imports:
   grDevices,
   stats
 Suggests:
-  testthat
+  testthat,
+  datasets
 RoxygenNote: 6.0.1
