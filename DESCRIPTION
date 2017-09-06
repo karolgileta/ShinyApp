@@ -1,0 +1,18 @@
+Package: ShinyApp
+Type: Package
+Title: Converts time series data
+Version: 1.0.0
+Author: Karol Gileta
+Maintainer: Karol Gileta <karol.gileta@gmail.com>
+Description: Package converts given time series data and returns graphs and files with data.
+Encoding: UTF-8
+License: GPL-3
+LazyData: true
+Imports:
+  ggplot2,
+  assertthat,
+  grDevices,
+  stats
+Suggests:
+  testthat
+RoxygenNote: 6.0.1

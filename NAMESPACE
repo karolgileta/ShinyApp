@@ -1,0 +1,6 @@
+exportPattern("^[[:alpha:]]+")
+import(stats)
+import(ggplot2)
+importFrom("grDevices", "dev.off", "png")
+importFrom("utils", "write.csv")
+importFrom("assertthat", "is.writeable")
