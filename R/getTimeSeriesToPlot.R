@@ -17,7 +17,7 @@ getTimeSeriesToPlot = function(time.series) {
   #' @import stats
   require(stats)
 
-  stopifnot(is.ts(data.frame.to.plot))
+  stopifnot(is.ts(time.series))
   data.frame.to.plot = data.frame(date=time(time.series), values=as.matrix(time.series))
   return(data.frame.to.plot)
 }
