@@ -12,7 +12,10 @@ Imports:
   ggplot2,
   assertthat,
   grDevices,
-  stats
+  stats,
+  png,
+  grid,
+  graphics
 Suggests:
   testthat,
   datasets
