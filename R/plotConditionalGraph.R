@@ -16,6 +16,7 @@ plotConditionalGraph = function(time.series, months, condition) {
   #' plotConditionalGraph(datasets::AirPassengers, 12, 0.15)
   #' @export plotConditionalGraph
   #' @import graphics
+  stopifnot(is.ts(time.series))
   data = as.data.frame(time.series)
   data$nextprevious = c(rep(0, months), data$x[1:(nrow(data)-months)])
   data$diff = NA
