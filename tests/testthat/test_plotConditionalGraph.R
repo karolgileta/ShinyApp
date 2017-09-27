@@ -2,7 +2,8 @@ library(testthat)
 library(ShinyApp)
 
 test_that("Correct time series argument in function", {
-  expect_error(plotConditionalGraph(), 'argument "time.series" is missing, with no default')
+  expect_error(plotConditionalGraph(),
+               'argument "time.series" is missing, with no default')
 })
 
 test_that("Correct time series argument in function", {

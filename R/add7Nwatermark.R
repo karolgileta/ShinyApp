@@ -1,5 +1,11 @@
-add7NWatermark = function(file.name, file.width, file.height, watermark.path = "inst/7nlogo.png",
-                          x.coordinate = 0.84, y.coordinate = 0.17, width = 0.2, plot.unit = 'npc'){
+add7NWatermark = function(file.name,
+                          file.width,
+                          file.height,
+                          watermark.path = "inst/7nlogo.png",
+                          x.coordinate = 0.84,
+                          y.coordinate = 0.17,
+                          width = 0.2,
+                          plot.unit = 'npc') {
   #' @title Add 7N watermark to graph
   #' @name add7NWatermark
   #'
@@ -34,6 +40,11 @@ add7NWatermark = function(file.name, file.width, file.height, watermark.path = "
   grid.newpage()
   grid.raster(m)
   m2 = readPNG(watermark.path)
-  grid.raster(m2, x = unit(x.coordinate, plot.unit), y=unit(y.coordinate, plot.unit), width = unit(width, plot.unit))
+  grid.raster(
+    m2,
+    x = unit(x.coordinate, plot.unit),
+    y = unit(y.coordinate, plot.unit),
+    width = unit(width, plot.unit)
+  )
   dev.off()
 }

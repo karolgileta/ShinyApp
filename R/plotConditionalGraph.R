@@ -18,12 +18,12 @@ plotConditionalGraph = function(time.series, months, condition) {
   #' @import graphics
   stopifnot(is.ts(time.series))
   data = as.data.frame(time.series)
-  data$nextprevious = c(rep(0, months), data$x[1:(nrow(data)-months)])
+  data$nextprevious = c(rep(0, months), data$x[1:(nrow(data) - months)])
   data$diff = NA
-  data$diff = data$x/data$nextprevious-1
+  data$diff = data$x / data$nextprevious - 1
   data$diff[1:months] = 0
   x = which(data$diff >= condition)
-  ind = as.numeric(time(time.series)[1]) + c((x-1)/12)
+  ind = as.numeric(time(time.series)[1]) + c((x - 1) / 12)
   plot(time.series)
   points(ind, time.series[x])
 }

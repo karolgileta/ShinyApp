@@ -22,13 +22,17 @@ saveToCsv = function(time.series, name, directory) {
     dir.create(directory)
   }
 
+  name = paste0(name, '.csv')
+
   if (substr(directory, nchar(directory), nchar(directory)) == '/') {
-    file.directory = paste0(directory, name, '.csv')
+    directory = substr(directory, 1, nchar(directory) - 1)
+    file.directory = file.path(directory, name)
   } else {
-    file.directory = paste0(directory, '/', name, '.csv')
+    file.directory = file.path(directory, name)
   }
 
-  try(if(!(is.writeable(file.directory))) stop("Wrong file path"))
+  try(if (!(is.writeable(file.directory)))
+    stop("Wrong file path"))
   try(write.csv(data, file.directory))
   print(paste0('File ', name, ' saved in ', file.directory))
   return(data)
